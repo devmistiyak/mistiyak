@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Small inline styles to show social icons on/under the profile image */
+        .about-image{ position:relative; display:inline-block; padding-bottom:42px; }
+
+        /* Profile image: smooth zoom on hover + subtle entry animation */
+        .about-image .image-placeholder { overflow: hidden; border-radius:16px; }
+        .about-image .image-placeholder img,
+        .about-image .profile-img {
+            display:block;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:12px;
+            transition: transform 0.6s cubic-bezier(.2,.8,.2,1), filter 0.3s ease;
+            transform-origin: center center;
+            animation: profile-entry 560ms ease;
+        }
+        .about-image .image-placeholder img:hover,
+        .about-image .profile-img:hover {
+            transform: scale(1.06);
+        }
+        @keyframes profile-entry {
+            from { transform: scale(0.98); }
+            to   { transform: scale(1); }
+        }
+
+        /* Social icons wrapped in a small centered box under the image */
+        .about-image .image-social{
+            position:absolute;
+            left:50%;
+            transform:translateX(-50%);
+            bottom:-28px;
+            display:flex;
+            gap:10px;
+            justify-content:center;
+            z-index:20;
+            background: rgba(255,255,255,0.96);
+            padding:8px 12px;
+            border-radius:12px;
+            box-shadow: 0 10px 30px rgba(8,15,36,0.12);
+            border: 1px solid rgba(0,0,0,0.06);
+            backdrop-filter: blur(4px);
+            max-width:90%;
+        }
+        .about-image .image-social a{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:40px;
+            height:40px;
+            background:transparent;
+            color:#333;
+            border-radius:50%;
+            text-decoration:none;
+            transition: transform .18s ease, background .18s ease, color .18s ease;
+        }
+        .about-image .image-social a:hover{
+            transform:translateY(-4px);
+            background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+            color:#fff;
+            box-shadow: 0 8px 20px rgba(37,99,235,0.12);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Mistiyak Meraz</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="tagline">Creating Digital Experiences That Matter</p>
+            <p class="hero-description">I craft beautiful, functional websites that help businesses grow and connect with their audience.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Happy Clients</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                        <div class="image-placeholder">
+                            <img src="././img/mine.jpg" alt="Portrait of Mistiyak Meraz" class="profile-img">
+                        </div>
+                    <div class="image-social" aria-label="social links">
+
+                        <a href="https://www.facebook.com/mdmistiyak" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+
+                       <a href="https://www.instagram.com/mistiyak_meraz?igsh=eTJod2hid3FmdzJ4" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+
+                        <a href="https://twitter.com/mdmistiyak" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                  
+
+                        <a href="#" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Hello, I'm Mistiyak Meraz — Web Developer & Designer</h3>
+                    <p>I'm passionate about creating beautiful, functional websites that make a difference. With years of
+                         experience in web development, I specialize in building responsive, user-friendly websites that help businesses
+                          succeed online.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <p>Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>mdmistiyak@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+880 1874***1</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Freelance</strong>
+                                <p>Available</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>My Skills</h4>
+                    <div class="skills">
+                        <div class="skill">
+                            <span>HTML</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>CSS</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>WORDPRESS</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>ELEMENTOR</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section id="quotes" class="quotes">
+        <div class="container">
+            <h2 class="section-title">Favorite Philosophers & Quotes</h2>
+            <p class="section-subtitle">Thoughts that inspire my work — selected from Franz Kafka, Friedrich Nietzsche, and Plato</p>
+
+            <div class="quotes-carousel">
+                <div class="quotes-inner">
+                    <div class="quote-card" data-index="0">
+                        <p class="quote-text">"A book must be the axe for the frozen sea within us."</p>
+                        <p class="quote-author">— Franz Kafka</p>
+                    </div>
+                    <div class="quote-card" data-index="1">
+                        <p class="quote-text">"That which does not kill us makes us stronger."</p>
+                        <p class="quote-author">— Friedrich Nietzsche</p>
+                    </div>
+                    <div class="quote-card" data-index="2">
+                        <p class="quote-text">"He who has a why to live can bear almost any how."</p>
+                        <p class="quote-author">— Friedrich Nietzsche</p>
+                    </div>
+                    <div class="quote-card" data-index="3">
+                        <p class="quote-text">"The beginning is the most important part of the work."</p>
+                        <p class="quote-author">— Plato</p>
+                    </div>
+                    <div class="quote-card" data-index="4">
+                        <p class="quote-text">"Wise men speak because they have something to say; fools because they have to say something."</p>
+                        <p class="quote-author">— Plato</p>
+                    </div>
+                </div>
+                <div class="carousel-dots" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories/Testimonials Section removed per request -->
+
+    <!-- Share Post Section -->
+    <section id="share-post" class="share-post">
+        <div class="container">
+            <h2 class="section-title">Share a Post</h2>
+            <p class="section-subtitle">Write something for the blog</p>
+
+            <div class="share-post-form">
+                <form id="postForm" class="post-form" data-endpoint="">
+                    <div class="form-group">
+                        <input type="text" name="title" placeholder="Post Title" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="author" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="content" placeholder="Write your post..." rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publish Post</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <p class="section-subtitle">Insights, tips, and thoughts on web development</p>
+            
+            <div class="blog-grid" data-feed="">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">April 25, 2026</span>
+                        <h3>Modern Web Development Best Practices</h3>
+                        <p>Explore the latest trends and best practices in web development that can help you build better websites.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">April 20, 2026</span>
+                        <h3>Responsive Design: A Complete Guide</h3>
+                        <p>Learn how to create websites that look great on all devices, from mobile phones to desktop computers.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">April 15, 2026</span>
+                        <h3>Speed Optimization Techniques</h3>
+                        <p>Discover proven techniques to make your website faster and improve user experience.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a project in mind? Let's talk about how I can help you.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>mdmistiyak@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>0187463***1</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9AM - 6PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/mdmistiyak">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mistiyak_meraz?igsh=eTJod2hid3FmdzJ4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/mdmistiyak">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-from">
+                    <h3>Send a Message</h3>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message 
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2HGUpE9rkH5liKAK7wHByxNJlxfhvUxUbVkgEKY1HoEw5Lg/viewform?usp=publish-editor"></a>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>My Portfolio</h4>
+                    <p>Creating beautiful digital experiences that help businesses grow and succeed online.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
