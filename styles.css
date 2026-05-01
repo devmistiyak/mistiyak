@@ -180,7 +180,7 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('../img/Firefly.jpg'); 
+    background: url(img/Firefly.jpg); 
      background-position:center;
      background-size: cover;
     background-repeat: no-repeat;
