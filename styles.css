@@ -174,6 +174,12 @@ ul {
 
 /* Hero Section */
 .hero {
+    background-image: url(img\Firefly.jpg);
+     background-position:center;
+     background-size: cover;
+    background-repeat: no-repeat;
+    
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -181,10 +187,7 @@ ul {
     align-items: center;
     text-align: center
     
-    /* background-image: url(img\Firefly.jpg);
-     background-position:center;
-     background-size: cover;
-    background-repeat: no-repeat; */ */
+    /*  */ */
     
     padding: 120px 20px 60px;
     background: linear-gradient(222deg, #dd0029 0%, #e0f2fe 100%); 
